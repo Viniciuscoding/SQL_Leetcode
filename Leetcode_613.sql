@@ -26,6 +26,11 @@ FROM (SELECT DISTINCT (ABS(x.x - y.x)) AS distance
       FROM point x, point y
       WHERE x.x <> y.x) d
 
+# SOLUTION by Cenkai (MOST CLEVER ONE)
+SELECT MIN(a.x - b.x) AS shortest
+FROM point a, point b
+WHERE a.x > b.x;
+
 # OTHERS SOLUTION
 SELECT MIN(ABS(x.x - y.x)) AS shortest
 FROM point x, point y

@@ -1,7 +1,6 @@
 /* Number of Comments per Post
 
 Table: Submissions
-
 +---------------+----------+
 | Column Name   | Type     |
 +---------------+----------+

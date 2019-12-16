@@ -59,9 +59,10 @@ The comment with id 6 is a comment on a deleted post with id 7 so we ignored it.
 */
 
 # SOLUTION by makisang - I did not fully understand it
-SELECT sub_id AS post_id, (SELECT COUNT(DISTINCT(s1.sub_id))
-                           FROM Submissions s1
-                           WHERE s1.parent_id = s.sub_id) AS number_of_comments
+SELECT sub_id AS post_id,
+       (SELECT COUNT(DISTINCT(s1.sub_id))
+        FROM Submissions s1
+        WHERE s1.parent_id = s.sub_id) AS number_of_comments
 FROM Submissions s
 WHERE s.parent_id IS NULL
 GROUP BY sub_id

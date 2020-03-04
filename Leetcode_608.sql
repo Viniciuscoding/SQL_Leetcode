@@ -47,7 +47,7 @@ And here is the image of the sample tree as below:
 Note: If there is only one node on the tree, you only need to output its root attributes.
 */
 
-# SOLUTION by tinalxj12 (Brilliant!)
+// SOLUTION by tinalxj12 (Brilliant!)
 SELECT DISTINCT t1.id, (CASE
                         WHEN t1.p_id IS NULL THEN 'Root'
                         WHEN t1.p_id IS NOT NULL AND t2.p_id IS NOT NULL THEN 'Inner'

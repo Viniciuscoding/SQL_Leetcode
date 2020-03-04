@@ -56,3 +56,12 @@ WHERE id = (SELECT CandidateId
             GROUP BY CandidateId
             ORDER BY COUNT(id) DESC
             LIMIT 1)
+
+# SOLUTION by amymamy
+SELECT Name
+FROM Candidate c
+INNER JOIN Vote v
+ON c.id = v.CandidateId
+GROUP BY v.CandidateId
+ORDER BY COUNT(*) DESC
+LIMIT 1

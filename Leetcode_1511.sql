@@ -101,7 +101,7 @@ HAVING SUM(IF(LEFT(o.order_date, 7) = '2020-06', o.quantity, 0) * p.price) >= 10
 AND SUM(IF(LEFT(o.order_date, 7) = '2020-07', o.quantity, 0) * p.price) >= 100
 
 
-Solution by OutOfMemory123
+# Solution by OutOfMemory123
 SELECT customer_id, name
 FROM Customers
 JOIN Orders USING(customer_id) 

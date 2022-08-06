@@ -34,14 +34,14 @@ Explanation: a@b.com is repeated two times.
 */
 
 # MY SOLUTION
+SELECT Email
+FROM Person
+GROUP BY Email
+HAVING COUNT(Email) > 1
+
+# MY SOLUTION
 SELECT a.email as Email
 FROM (SELECT b.email, COUNT(b.email) AS freq
       FROM Person b
       GROUP BY email) AS a
 WHERE a.freq > 1
-
-# MY SOLUTION
-SELECT Email
-FROM Person
-GROUP BY Email
-HAVING COUNT(Email) > 1

@@ -24,6 +24,7 @@ Person table:
 | 2  | c@d.com |
 | 3  | a@b.com |
 +----+---------+
+
 Output: 
 +---------+
 | Email   |

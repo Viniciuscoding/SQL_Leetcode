@@ -60,6 +60,7 @@ IFNULL((SELECT DISTINCT Salary
        LIMIT 1 OFFSET 1),
        NULL) AS SecondHighestSalary
 
+-- NOTE: DISTINCT clause in SQL considers unique values as NULL.
 SELECT (SELECT DISTINCT Salary
         FROM Employee
         ORDER BY Salary DESC
